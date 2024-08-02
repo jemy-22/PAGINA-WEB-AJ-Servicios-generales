@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+:root{
+    --background: linear-gradient(135deg,#667eea7e 0%,#764ba298);
+    --color-primary:#667eea7e;
+    --color-secondary: #764ba298;
+    --boton-padding: 20px 40px;
+
+}
+/*body{
+    background-image: url('../assets/azul.jpg');
+}*/
+
+
+.subtitle{
+    color: rgb(255, 140, 0);
+    font-size: 2rem;
+    margin-bottom: 0px;
+    
+}
+
+.separador{
+    color: rgb(255, 140, 0);
+}
+
+.hero{
+    height: 110vh;
+    background-image: var(--background),url('../assets/roch.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+.hero ,.container{
+    padding: 0%;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav--footer{
+    font-weight: 300;
+    justify-content: flex-end;
+}
+
+.nav__items{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+    border: 1px solid white;
+}
+
+.nav__items--cta{
+    border: 1px solid white;
+}
+
+.nav__items--footer{
+    padding: 10px;
+}
+
+.hero__container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color: white;
+
+}
+
+.hero_texts{
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.hero__title{
+    font-size: 3.2rem;
+}
+
+.hero__subtitle{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 15px 0px;
+}
+
+.hero__cta{
+    display: inline-block;
+    background: #fff;
+    padding: var(--boton-padding);
+    color: var(--color-primary);
+    border-radius: 40px;
+}
+
+.hero__wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+/*---------------------------------*/
+/* projects */
+
+.projects{
+    background: #f2f2f2;
+    
+}
+.projects__grid{
+    display: grid;
+    height: 600px;
+    grid-template-areas: 
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap: 10px;
+}
+
+.projects__item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.projects__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.projects__item:nth-of-type(1){
+    grid-area: img1;
+}
+.projects__item:nth-of-type(2){
+    grid-area: img2;
+}
+.projects__item:nth-of-type(3){
+    grid-area: img3;
+}
+.projects__item:nth-of-type(4){
+    grid-area: img4;
+}
+.projects__item:nth-of-type(5){ 
+    grid-area: img5;
+}
+
+.projects__hover{
+    position: absolute;
+    background: #ff44008c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #f2f2f2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.projects__item:hover .projects__hover{
+    transform: translateX(0%);
+}
+
+.projects_icon{
+    margin-top: 10px;
+    font-size: 30px;
+}
+/*---------------------------------*/
+
+.about{
+    background: rgb(255, 255, 255);
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+}
+
+.abaut__img{
+    text-align: center;
+    
+}
+
+.about__img--letf{
+    text-align: left;
+    
+}
+
+.about_picture{
+    max-width: 80%;
+}
+
+.abaut__paragraph{
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    
+    
+}
+/* Footer */
+
+.footer{
+    background: var(--color-primary);
+    height: 150px;
+}
+
+.footer__grid{
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    gap: 20px;
+    align-items: center;
+}   
+
+.footer__title{
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer__icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__container-icons{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.footer__icon{
+    color: inherit;
+    font-size: 30px;
+    text-decoration: none;
+    
+}
+
+.fa-brands.footer__icon{
+    line-height: 60px
+}
